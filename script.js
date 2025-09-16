@@ -71,6 +71,9 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+let str = "Motorsport is great";
+console.log("str.charAt(3) = " + str.charAt(3));
+console.log("str.length = "+str.length);
 
 // ===================================
 // TODO-4: DATE — day, month, and year
