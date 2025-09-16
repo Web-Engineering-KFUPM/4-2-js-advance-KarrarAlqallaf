@@ -96,6 +96,9 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
+const myarray =[0,1,2,3,4,5,6,7,8,9];
+console.log("Math.min: " + Math.min(...myarray) + "\n" + "Math.max: " + Math.max(...myarray));
+
 
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
@@ -107,6 +110,25 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+function maxArray(array){
+    try{
+        console.log("try block..." );
+        const x = 1/array.length;
+        return Math.max(...array);
+
+    }catch(e){
+        console.log("catch block...")
+        console.log(e);
+    }finally {
+        console.log("finally block...")
+    }
+}
+console.log(maxArray(myarray));
+const emtArray = []
+console.log(maxArray(emtArray));
+
+
+
 
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
