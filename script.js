@@ -110,23 +110,26 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
-function maxArray(array){
-    try{
-        console.log("try block..." );
-        const x = 1/array.length;
-        return Math.max(...array);
 
-    }catch(e){
+console.log("------------------------------------------------------")
+function maxArray(array) {
+    try {
+        console.log("try block...")
+        if (array == null || array.length === 0) {
+            throw new Error("array should not be null");
+        }
+        return Math.max(...array);
+    } catch (e) {
         console.log("catch block...")
-        console.log(e);
-    }finally {
+        console.log(e.message);
+        return null;
+    } finally {
         console.log("finally block...")
     }
 }
 console.log(maxArray(myarray));
 const emtArray = []
 console.log(maxArray(emtArray));
-
 
 
 
